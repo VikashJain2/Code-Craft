@@ -1,4 +1,4 @@
-import { SignInButton, SignOutButton, useUser } from "@clerk/nextjs";
+import { SignInButton, useUser } from "@clerk/nextjs";
 import { Id } from "../../../../../convex/_generated/dataModel";
 import { useState } from "react";
 import { useMutation, useQuery } from "convex/react";
@@ -25,7 +25,7 @@ const Comments = ({ snippetId }: { snippetId: Id<"snippets"> }) => {
     try {
       await addComment({ snippetId, content });
     } catch (error) {
-      console.log("Error adding comment");
+      console.log("Error adding comment", error);
       toast.error("Something went wrong");
     } finally {
       setIsSubmitting(false);

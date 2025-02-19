@@ -13,7 +13,7 @@ import { defineMonacoThemes, LANGUAGE_CONFIG } from "@/app/(root)/_constants";
 import CopyButton from "./_components/CopyButton";
 import Comments from "./_components/Comments";
 
-const page = () => {
+const Page = () => {
   const snippetId = useParams().id;
 
   const snippet = useQuery(api.snippets.getSnippetById, {
@@ -111,4 +111,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

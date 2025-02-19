@@ -6,7 +6,7 @@ import { api } from "../../../../convex/_generated/api";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { Clock, StarIcon, Trash, User } from "lucide-react";
+import { Clock, Trash, User } from "lucide-react";
 import Image from "next/image";
 import toast from "react-hot-toast";
 import StarButton from "@/components/StarButton";
@@ -21,6 +21,7 @@ const SnippetCard = ({ snippet }: { snippet: Snippet }) => {
 await deleteSnippet({snippetId: snippet._id})
 toast.success("Snippet deleted successfully")
     }catch(error){
+      console.log(error)
       console.log("Error deleting snippet")
       toast.error("Error deleting snippet")
     }finally{
