@@ -6,7 +6,6 @@ import { LANGUAGE_CONFIG } from "../_constants";
 import Image from "next/image";
 import {
   ChevronDownIcon,
-  Lock,
   SparklesIcon,
 } from "lucide-react";
 const LanguageSelector = () => {

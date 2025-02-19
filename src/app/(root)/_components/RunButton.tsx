@@ -8,7 +8,7 @@ import { Loader2, Play } from "lucide-react";
 import { api } from "../../../../convex/_generated/api";
 const RunButton = () => {
   const { user } = useUser();
-  const { runCode, language, isRunning, executionResult } =
+  const { runCode, language, isRunning } =
     useCodeEditorStore();
   const saveExecution = useMutation(api.codeExecutions.saveExecution);
   const handleRun = async () => {
