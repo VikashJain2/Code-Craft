@@ -123,13 +123,16 @@ const EditorPanel = () => {
         <div className="relative group rounded-xl overflow-hidden ring-1 ring-white/[0.05]">
           {clerk.loaded && (
             <Editor
+            
               height="600px"
-              language={LANGUAGE_CONFIG[language].monacoLanguage}
+                   language={LANGUAGE_CONFIG[language].monacoLanguage}
               onChange={handleEditorChange}
               theme={theme}
               beforeMount={defineMonacoThemes}
               onMount={(editor) => setEditor(editor)}
               options={{
+                suggestOnTriggerCharacters: true,
+                autoClosingBrackets: true,
                 minimap: { enabled: false },
                 fontSize,
                 autometicLayout: true,
